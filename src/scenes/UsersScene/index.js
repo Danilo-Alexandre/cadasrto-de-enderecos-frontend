@@ -35,9 +35,11 @@ function UsersScene() {
     <>
       <Header title="Usuários cadastrados" />
       <main>
-        {usersList.map((user) => (
-          <UserCard id={user.id} name={user.name} email={user.email} />
-        ))}
+        <section className="info-usuario">
+          {usersList.map((user) => (
+            <UserCard id={user.id} name={user.name} email={user.email} />
+          ))}
+        </section>
       </main>
     </>
   );

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.info-usuario{
+.info-enderecos{
 display: flex;
 justify-content: center;
 flex-wrap: wrap;

@@ -7,7 +7,7 @@ function UserRegisterScene() {
 
   return (
     <>
-      <Header title="Cadastro de usuários" />
+      <Header className="titulo" title="Cadastro de usuários" />
       <main>
         <CadastroUsuarios/>
       </main>

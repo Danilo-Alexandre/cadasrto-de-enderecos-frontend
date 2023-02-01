@@ -2,11 +2,13 @@ import "./App.css";
 import UserRegisterScene from "./scenes/UserRegisterScene";
 import UsersScene from "./scenes/UsersScene";
 import AdressScene from "./scenes/UserAdressScene";
+import AdressRegistration from "./scenes/AdressRegistration";
 
 function App() {
   // return <UserRegisterScene />;
   // return <UsersScene />;
-  return <AdressScene />;
+  // return <AdressScene />;
+  return <AdressRegistration />;
   // Exercício aula 26/01
   // Criar a Página de listagem de endereços
  // Essa página irá utilizar o componente do Header e também irá criar um componente novo

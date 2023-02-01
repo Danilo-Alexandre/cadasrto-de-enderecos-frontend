@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .card-enderecos{
     display: flex;
@@ -11,4 +7,8 @@
     background-color: rgb(191, 247, 241);
     border-radius: 1rem;
     width: 20rem;
+}
+
+.hide{
+    display: none;
 }

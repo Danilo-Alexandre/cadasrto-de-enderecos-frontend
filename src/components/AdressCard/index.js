@@ -11,7 +11,7 @@ function AdressCard({
     complemento
 }){
     return (
-        <div className="card-enderecos">
+        <div>
         <span>Usuario: {fk_usuario}</span>
         <span>Rua: {rua}</span>
         <span>Numero: {numero}</span>

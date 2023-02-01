@@ -10,6 +10,21 @@ function CadastroEnderecos() {
     const [cidade, setCidade] = useState()
     const [estado, setEstado] = useState()
     const [complemento, setComplemento] = useState()
+    const [cep, setCep] = useState()
+
+    async function handleCep(){
+        fetch(`http://viacep.com.br/ws/${cep}/json/`)
+        .then(response => {
+            return response.json()
+        })
+        .then(buscaCep =>{
+            setRua(buscaCep.logradouro)
+            setBairro(buscaCep.bairro)
+            setCidade(buscaCep.localidade)
+            setEstado(buscaCep.uf)
+        })
+        .catch(err => console.log(err))
+    }
     
     
     async function handleSubmit(event) {
@@ -39,7 +54,9 @@ function CadastroEnderecos() {
         <form className="cadastro-endereco" onSubmit={handleSubmit}>
           <label name="usuario">usuario:</label>  
           <input value={usuario} onChange={(event)=> setUsuario(event.target.value)} name="usuario" type="number"/>
-          <label name="rua">rua:</label>  
+          <label name="rua">CEP:</label>  
+          <input onBlur={handleCep} value={cep} onChange={(event)=> setCep(event.target.value)} name="cep" type="text"/>
+          <label name="cep">rua:</label>  
           <input value={rua} onChange={(event)=> setRua(event.target.value)} name="rua" type="text"/>
           <label name="numero">numero:</label>  
           <input value={numero} onChange={(event)=> setNumero(event.target.value)} name="numero" type="number"/>
